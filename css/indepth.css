@@ -589,9 +589,13 @@
 }
 
 .indepth_result_cont{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
+	width: 640px;
+	height: 225px;
+	margin: auto;
+	background-image: url(../images/Resultado.png);
+	background-position: center top;
+	background-size: contain;
+	
 }
 
 .indepth_tenis_title{

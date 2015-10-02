@@ -33,7 +33,6 @@ var input_radio=false;
 var tenis_name="";
 
 
-
 var maxTime = 99;
 var time = maxTime;
 var time_out=0;
@@ -44,12 +43,13 @@ $('#dial').knob({
   width: 45,
   height: 45,
   inputColor: "#fff",
-  fgColor: "rgb(48, 103, 165)",
-  angleArc: "-360",
-  rotation: "clockwise",
+  fgColor: "#fff",
+  bgColor: "rgb(48, 103, 165)",
+  angleArc: "360",
+  rotation: "anticlockwise",
   displayPrevious: true,
-  lineCap: "rounded",
-  fontWeight: 16
+  fontWeight: 16,
+  
 });
 
 $("#indepth_contador_circle input").css("margin-top",0);
