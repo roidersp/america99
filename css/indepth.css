@@ -18,7 +18,6 @@
 	bottom: 10px;
 	left: 20px;
 	font-weight: 300;
-	
 }
 
 #recommended-wrapper, .recommended-wrapper{
@@ -31,7 +30,6 @@
 	width: 100%;
 	margin: auto;
 	color: #fff;
-	
 }
 
 #indepth_portada_text{
@@ -80,9 +78,31 @@
 	height: 120px;
 	background-image: url(../images/Fondo_tiempo.png);
 	position: absolute;
-	top: 0px;
-	
-	
+	top: 0px;	
+}
+
+#indepth_contador{
+	width: 170px;
+	height: 80px;
+	margin: 20px auto;
+	background-image: url(../images/Tiempo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	display: table;
+	text-align: center;
+
+}
+
+#indepth_contador_circle{
+	display: table-cell;
+	vertical-align: middle;
+	margin: auto;
+	margin-top: 2px;
+	transform: translateY(3px);
+	-webkit-transform: translateY(3px);
+	-moz-transform: translateY(3px);
+	-o-transform: translateY(3px);
 }
 
 #indepth_page1{
@@ -141,6 +161,7 @@
 #com{
 	background: white;
 	z-index: 10;
+	font-weight: bolder;
 }
 
 .indepth_page_body{
@@ -425,13 +446,9 @@
 	vertical-align: top;
 }
 
-.indepth_radios{
-	margin-top: 50px;
-	color: white;
-	font-size: 18px;
-	font-family: 'Roboto';
-	font-weight: 300;
-}
+
+
+
 
 .indepth_aviso{
 	margin-top: 50px;
@@ -441,18 +458,7 @@
 	font-weight: 300;
 }
 
-.indepth_radios input[type="radio"]{
-	margin-bottom: 8px;
-	
-}
 
-.indepth_jugadores{
-	display: none;
-}
-
-.indepth_jugadores .indepth_radios{
-	display: none;
-}
 
 .indepth_cuadro_text{
 	background-color: #020202;
@@ -500,7 +506,6 @@
 }
 
 #indepth_resultados{
-	background-color: black;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: table;
@@ -508,6 +513,10 @@
 	z-index: 200;
 	top:0;
 	background-color: #F2461D;
+	background-image: url(../images/Portada.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 #top-bar-wrapper{

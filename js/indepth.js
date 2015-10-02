@@ -34,6 +34,35 @@ var tenis_name="";
 
 
 
+var maxTime = 3;
+var time = maxTime;
+var time_out=0;
+$('#dial').knob({
+  readOnly : true,
+  thickness : 0.2,
+  max : maxTime,
+  width: 45,
+  height: 45,
+  inputColor: "#fff",
+  fgColor: "rgb(48, 103, 165)",
+  angleArc: "-360",
+  rotation: "clockwise",
+  displayPrevious: true,
+  lineCap: "rounded",
+  fontWeight: 16
+});
+
+
+setInterval(function() {
+  if(time<=0) clearInterval($(this));
+  time--;
+  time_out++;
+  $('#dial')
+        .val(time)
+        .trigger('change');
+}, 1000);
+
+
 
 $('.indepth_num').keydown(function(event) {
 	// Allow special chars + arrows 
