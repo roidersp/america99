@@ -34,7 +34,7 @@ var tenis_name="";
 
 
 
-var maxTime = 3;
+var maxTime = 99;
 var time = maxTime;
 var time_out=0;
 $('#dial').knob({
@@ -52,11 +52,15 @@ $('#dial').knob({
   fontWeight: 16
 });
 
+$("#indepth_contador_circle input").css("margin-top",0);
+
+$('#dial')
+        .val(99)
+        .trigger('change');
 
 setInterval(function() {
   if(time<=0) clearInterval($(this));
   time--;
-  time_out++;
   $('#dial')
         .val(time)
         .trigger('change');

@@ -105,6 +105,11 @@
 	-o-transform: translateY(3px);
 }
 
+#indepth_contador_circle input{
+	font-size: 16px;
+	min-height: 45px;
+}
+
 #indepth_page1{
 	background-image: url(../images/Preguntas.jpg);
 	background-position: center center;
