@@ -4,8 +4,6 @@
 	display: none;
 }
 
-
-
 .indepth_concurso_condiciones{
 	font-size: 12px;
 	margin-top: 10px;
@@ -77,8 +75,10 @@
 	width: 100%;
 	height: 120px;
 	background-image: url(../images/Fondo_tiempo.png);
+	top: 0px;
+	left: 0px;	
+	z-index: 1000;
 	position: absolute;
-	top: 0px;	
 }
 
 #indepth_contador{
@@ -103,6 +103,7 @@
 	-webkit-transform: translateY(3px);
 	-moz-transform: translateY(3px);
 	-o-transform: translateY(3px);
+	position: relative;
 }
 
 #indepth_contador_circle input{
@@ -110,11 +111,13 @@
 	min-height: 45px;
 }
 
-#indepth_page1{
+#indepth_page1 {
 	background-image: url(../images/Preguntas.jpg);
 	background-position: center center;
 	background-size: cover;
-	background-attachment: fixed;
+	display: none;
+	position: absolute;
+	left: 0;
 }
 
 .indepth_portada_cont{
@@ -134,14 +137,12 @@
 	text-align: center;
 	vertical-align: middle;
 	margin: auto;
-	
 }
 
 .indepth_pages{
 	width: 100%;
 	min-width: 960px;
 	position: relative;
-	overflow: hidden;
 	background-color: white;
 	font-family: 'Roboto';
 	font-size: 19px;
@@ -375,11 +376,7 @@
 
  /****DINAMICO****/
 
-.section {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
+
 
 .indepth_pregunta{
 	font-size: 18px;
@@ -460,21 +457,44 @@
 }
 
 .indepth_cuadro_text{
-	background-color: #020202;
+	background-color: #fff;
 	border: none;
 	width: 30px;
 	height: 40px;
 	margin-top: 10px;
 	margin-bottom: 30px;
-	color: white;
+	color: #2b67a5;
 	font-size: 18px;
 	line-height: 40px;
-	font-style: italic;
 	padding-left: 15px;
 	padding-right: 15px;
-	font-weight: 300;
+	font-weight: 500;
 	text-align: right;
-	border: 1px solid rgb(66, 66, 66);
+	border: 1px solid #d1af00;
+}
+
+.indepth_resultado_lo{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.indepth_pronostico_pregunta_text{
+	font-size: 20px;
+	font-weight: 500;
+	font-style: italic;
+}
+
+#indepth_twittear{
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/Twitter.png);
+	cursor: pointer;
+	margin: auto;
+	background-size: contain;
+}
+
+#indepth_twittear:hover{
+	opacity: .8;
 }
 
 .indepth_pregunta_t{
@@ -516,6 +536,9 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
+	color: white;
+	text-align: center;
+	display: none;
 }
 
 #top-bar-wrapper{
@@ -582,33 +605,41 @@
 	color: #dfdfdf;
 }
 
+.indepth_result_container{
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.indepth_result_title{
+	font-size: 22px;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.indepth_result_text{
+	font-style: italic;
+	font-size: 20px;
+}
+
+.indepth_pronostico_cont{
+	border: 2px solid #fff;
+	width: 600px;
+	margin: 40px auto;
+	padding: 50px 20px;
+}
+
 .indepth_result_cont{
 	width: 640px;
-	height: 225px;
+	height: 155px;
 	margin: auto;
 	background-image: url(../images/Resultado.png);
 	background-position: center top;
 	background-size: contain;
+	padding-top: 70px;
+	display: table;
 	
-}
-
-.indepth_tenis_title{
-	font-family: 'Roboto';
-	font-weight: 600;
-	font-size: 30px;
-	text-align: center;
-	font-style: italic;
-	margin-top: 20px;
-}
-
-.indepth_tenis_text{
-	font-family: 'Roboto';
-	font-size: 18px;
-	
-	width: 690px;
-	text-align: center;
-	margin: auto;
-	margin-top: 30px;
 }
 
 

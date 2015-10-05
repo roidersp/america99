@@ -54,17 +54,35 @@ $('#dial').knob({
 
 $("#indepth_contador_circle input").css("margin-top",0);
 
+
+$("#indepth_boton_empezar").on("click",function(){
+	var ventana_alto = $(window).height();
+	$("#indepth_page1").css("top",ventana_alto-100);
+	$("#indepth_page1").show();
+	
+	$("#indepth_page1").animate({
+		top: 0
+	},2000, function(){
+		$("#indepth_tiempo_cont").css("position","fixed");
+		setInterval(function() {
+		  if(time<=0) clearInterval($(this));
+		  time--;
+		  $('#dial')
+		        .val(time)
+		        .trigger('change');
+		}, 1000);
+	})
+	
+	
+	
+});
+
+
 $('#dial')
         .val(99)
         .trigger('change');
 
-setInterval(function() {
-  if(time<=0) clearInterval($(this));
-  time--;
-  $('#dial')
-        .val(time)
-        .trigger('change');
-}, 1000);
+
 
 
 
