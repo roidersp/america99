@@ -118,7 +118,7 @@
 
 	display: none;
 	position: absolute;
-	left: 0;
+	
 	
 }
 
@@ -540,17 +540,12 @@
 }
 
 #indepth_resultados{
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: table;
-	background-position: right center;
 	z-index: 200;
 	top:0;
-	background-color: #F2461D;
-	background-image: url(../images/Portada.jpg);
+	background-image: url("../images/Portada.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-attachment: fixed;
+	background-size: cover;
 	color: white;
 	text-align: center;
 	display: none;

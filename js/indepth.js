@@ -33,7 +33,7 @@ var input_radio=false;
 var tenis_name="";
 
 
-var maxTime = 99;
+var maxTime = 3;
 var time = maxTime;
 var time_out=0;
 $('#dial').knob({
@@ -52,6 +52,9 @@ $('#dial').knob({
   
 });
 
+
+var intervalo;
+
 $("#indepth_contador_circle input").css("margin-top",0);
 
 
@@ -64,8 +67,16 @@ $("#indepth_boton_empezar").on("click",function(){
 		top: 0
 	},2000, function(){
 		$("#indepth_tiempo_cont").css("position","fixed");
-		setInterval(function() {
-		  if(time<=0) clearInterval($(this));
+		intervalo=setInterval(function() {
+		  if(time<=0){
+		  	clearInterval($(this));
+		  	finish_test();
+		  	var position = $("#indepth_resultados").offset();
+		  	$( "body, html").animate({ scrollTop: position.top }, 150, function () {
+			  	
+			  
+		    });
+		 }	
 		  time--;
 		  $('#dial')
 		        .val(time)
@@ -81,6 +92,18 @@ $("#indepth_boton_empezar").on("click",function(){
 $('#dial')
         .val(99)
         .trigger('change');
+
+
+function finish_test(){
+	$("#indepth_resultados").css("display","table");
+	$("#indepth_tiempo_cont").css("position","absolute");
+  	
+  	
+
+    
+
+    
+}
 
 
 
