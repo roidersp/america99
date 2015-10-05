@@ -60,7 +60,11 @@ $("#indepth_contador_circle input").css("margin-top",0);
 
 $("#indepth_boton_empezar").on("click",function(){
 	var ventana_alto = $(window).height();
-	$("#indepth_page1").css("top",ventana_alto-100);
+	$("#indepth_page1").css({
+		"top":ventana_alto-100,
+		"visibility":"visible",
+		"height": "auto"
+	});
 	$("#indepth_page1").show();
 	
 	$("#indepth_page1").animate({
@@ -69,13 +73,10 @@ $("#indepth_boton_empezar").on("click",function(){
 		$("#indepth_tiempo_cont").css("position","fixed");
 		intervalo=setInterval(function() {
 		  if(time<=0){
-		  	clearInterval($(this));
+		  	clearInterval(intervalo);
 		  	finish_test();
-		  	var position = $("#indepth_resultados").offset();
-		  	$( "body, html").animate({ scrollTop: position.top }, 150, function () {
-			  	
-			  
-		    });
+		  	
+		  	
 		 }	
 		  time--;
 		  $('#dial')
@@ -95,10 +96,20 @@ $('#dial')
 
 
 function finish_test(){
-	$("#indepth_resultados").css("display","table");
-	$("#indepth_tiempo_cont").css("position","absolute");
+	
+	 var ventana_alto = $(window).height();
+	var ventana_ancho = $(window).width();
+	
+	$("#indepth_resultados").css({
+		"visibility": "visible",
+		"position":"fixed",
+		"top": 0,
+		"left": -ventana_ancho
+	});
   	
-  	
+  	$("#indepth_resultados").animate({
+	  	"left": 0
+  	},500);
 
     
 

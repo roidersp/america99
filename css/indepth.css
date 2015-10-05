@@ -116,8 +116,9 @@
 
 #indepth_page1 {
 
-	display: none;
+	visibility: none;
 	position: absolute;
+	height: 0;
 	
 	
 }
@@ -548,7 +549,9 @@
 	background-size: cover;
 	color: white;
 	text-align: center;
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	display: table;
 }
 
 #top-bar-wrapper{
