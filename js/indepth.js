@@ -1,27 +1,4 @@
-var hashtags={"ace":"SoyAce15,bethedifference","x":"SoyX15,bethedifference"};
 
-var texto_tweet="";
-
-var url_adidas={"ace":"http://www.adidas.mx/ace","x":"http://www.adidas.mx/x"};
-
-var jugadores_nombres={"Ozil":"Ozil","Guardado":"Guardado","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
-
-var jugadores_twitter= {"Ozil":"@MesutOzil1088","Guardado":"@AGuardado18","Xabi":"@XabiAlonso","Rakitic":"@ivanrakitic","Layun":"@Miguel_layun","Bale":"@GarethBale11","Muller":"@esmuellert_","Benzema":"@Benzema","Suarez":"@LuisSuarez9"};
-
-var jugadores_descripcion={
-	"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.",
-	"Guardado":"Posees un toque privilegiado. Asistes y anotas cuando las circunstancias lo requieren. Eres atrevido, te gusta tener el control.",
-	"Xabi":"Eres líder y solidario, te gusta repartir el juego. Garra, pasión y elegancia definen tu personalidad dentro y fuera del campo.",
-	"Rakitic":"Eres la brújula de tu equipo. Posees una visión total de las circunstancias y sabes resolverlas. Tu trabajo defensivo no merma tu olfato goleador. Nadie te detiene.",
-	"Layun":"Miguel Layún","Bale":"Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible.",
-	"Muller":"Te gusta ser el centro de atención. Nadie te dice qué hacer, te gusta dominar al rival. Nunca te rindes, eres un ganador por naturaleza.",
-	"Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.",
-	"Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."
-	};
-
-var tamaño_total=1920;
-var tenis_data={"x":0,"ace":0};
-var jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
 var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 var ventana_ancho = $(window).width();
 var disable=true;
@@ -33,7 +10,7 @@ var input_radio=false;
 var tenis_name="";
 
 
-var maxTime = 3;
+var maxTime = 99;
 var time = maxTime;
 var time_out=0;
 $('#dial').knob({
@@ -59,31 +36,55 @@ $("#indepth_contador_circle input").css("margin-top",0);
 
 
 $("#indepth_boton_empezar").on("click",function(){
-	var ventana_alto = $(window).height();
-	$("#indepth_page1").css({
-		"top":ventana_alto-100,
-		"visibility":"visible",
-		"height": "auto"
-	});
-	$("#indepth_page1").show();
+	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
+	 $.getJSON( urlIndepth+"js/data.json", function( data ) {
+		 
+		 preguntas=data.preguntas;
+		 
+		 console.log(preguntas);
+		 
+		 $.each(preguntas, function( i, item ) {
+			 
+			var div=' <div class="indepth_pregunta_item" num="'+i+'"><div class="indepth_pregunta">'+(i+1)+'- '+item.pregunta+'</div><div class="indepth_pregunta_main"><div class="indepth_pregunta_img"></div><div class="indepth_respuestas_cont">';
+				
+			var div_items="";
+				$.each(item.respuestas, function( i, items ) {
+					div_items+='<div class="indepth_respuesta_item">'+items.respuesta+'</div>';
+				});						
+										
+			var div_fin='</div></div></div>';
+			 
+			 $("#indepth_pregunta_cont").append(div+div_items+div_fin);
+			 
+			 
+		 });
+		 
+		 $("#indepth_page1").css({
+			"top":ventana_alto-100,
+			"visibility":"visible",
+			"height": "auto"
+		});
+		$("#indepth_page1").show();
+		
+		$("#indepth_page1").animate({
+			top: 0
+		},2000, function(){
+			$("#indepth_tiempo_cont").css("position","fixed");
+			intervalo=setInterval(function() {
+			  if(time<=0){
+			  	clearInterval(intervalo);
+			  	finish_test();
+			  	
+			  	
+			 }	
+			  time--;
+			  $('#dial')
+			        .val(time)
+			        .trigger('change');
+			}, 1000);
+		})
+	 });
 	
-	$("#indepth_page1").animate({
-		top: 0
-	},2000, function(){
-		$("#indepth_tiempo_cont").css("position","fixed");
-		intervalo=setInterval(function() {
-		  if(time<=0){
-		  	clearInterval(intervalo);
-		  	finish_test();
-		  	
-		  	
-		 }	
-		  time--;
-		  $('#dial')
-		        .val(time)
-		        .trigger('change');
-		}, 1000);
-	})
 	
 	
 	
@@ -97,8 +98,10 @@ $('#dial')
 
 function finish_test(){
 	
-	 var ventana_alto = $(window).height();
+	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();;
 	var ventana_ancho = $(window).width();
+	
+	$("html, body, #indepth_page1").css("overfloww","auto")
 	
 	$("#indepth_resultados").css({
 		"visibility": "visible",
@@ -110,15 +113,7 @@ function finish_test(){
   	$("#indepth_resultados").animate({
 	  	"left": 0
   	},500);
-
-    
-
-    
 }
-
-
-
-
 
 $('.indepth_num').keydown(function(event) {
 	// Allow special chars + arrows 
@@ -144,15 +139,6 @@ $('.idepth_marcador').keydown(function(event) {
 	    }   
 	}
 });
-
-$(document).on({
-	mouseenter: function(){
-		$(".indepth_loquiero_cuadro").show();
-	},
-	mouseleave: function(){
-		$(".indepth_loquiero_cuadro").hide();
-	}
-},".indepth_lo_quiero_cont");
 
 $(document).on("click","#indepth_return",function(){
 	$(" input:radio").attr("checked", false);	
@@ -348,11 +334,8 @@ if (window.DISQUS) {
 $(document).ready(function(){
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
-	 var ventana_alto = $(window).height();
+	var ventana_alto = $(window).height();
 	var ventana_ancho = $(window).width();
-	
-	
-
 	
 	$("#indepth_cover").css({
 		"width": (ventana_ancho)+"px",
@@ -377,7 +360,6 @@ $(".indepth_boton").click(function(){
 		var jugadore_rand=[]
 		jugador_m=false;
 		
-		
 		var ord_jug=null;
 		
 		var listKeys = [];
@@ -388,7 +370,6 @@ $(".indepth_boton").click(function(){
 			}else{
 				if(jugadores_num[listKeys[i]]>jugadores_num[ord_jug]){
 					ord_jug=listKeys[i];
-					
 				}
 			}
 			
@@ -402,9 +383,7 @@ $(".indepth_boton").click(function(){
 			
 		}
 		
-		
 		if(!jugador_m){
-			
 			ord_jug=jugadore_rand[Math.floor(Math.random() * 2) + 0 ];
 		}
 		
@@ -467,21 +446,11 @@ $(".indepth_boton").click(function(){
 });
 
 $(window).on("resize", function(){
-	
 
 	var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 	var ventana_ancho = $(window).width();
 	
-	$(".vimeoFrame").css({
-		"width": (ventana_ancho)+"px",
-		"height": (ventana_alto-0)+"px"	
-	});
-	
-	$(".vimeo").css({
-		"width": (ventana_ancho+150)+"px",
-		"height": (ventana_alto+120)+"px"	
-	})
-	 $("#indepth_resultados").css({
+		 $("#indepth_resultados").css({
 		"width":ventana_ancho+"px",
 		"height":ventana_alto+"px"
 	});
