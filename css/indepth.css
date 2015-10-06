@@ -421,9 +421,9 @@
 
 .indepth_respuesta_item{
 	width: 100%;
-	height: 40px;
+	height: 50px;
 	background-color: #173464;
-	margin-bottom: 10px;
+	margin-bottom: 14px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	font-style: italic;
@@ -431,9 +431,9 @@
 	padding-left: 15px;
 	color: #fff;
 	cursor: pointer;
-	
 	background-position: right 10px center ;
 	background-repeat: no-repeat;
+	line-height: 50px;
 }
 
 .indepth_respuesta_item.bien{
