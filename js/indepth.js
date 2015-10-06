@@ -45,7 +45,7 @@ $("#indepth_boton_empezar").on("click",function(){
 		 
 		 $.each(preguntas, function( i, item ) {
 			 
-			var div=' <div class="indepth_pregunta_item" num="'+i+'"><div class="indepth_pregunta">'+(i+1)+'- '+item.pregunta+'</div><div class="indepth_pregunta_main"><div class="indepth_pregunta_img"></div><div class="indepth_respuestas_cont">';
+			var div=' <div class="indepth_pregunta_item" num="'+i+'"><div class="indepth_pregunta">'+(i+1)+'- '+item.pregunta+'</div><div class="indepth_pregunta_main"><div class="indepth_pregunta_img"><img src="'+urlIndepth+'images/preguntas/'+(i+1)+'.jpg" /></div><div class="indepth_respuestas_cont">';
 				
 			var div_items="";
 				$.each(item.respuestas, function( i, items ) {
