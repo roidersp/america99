@@ -8,11 +8,15 @@ var input_text2=false;
 var input_goles=false;
 var input_radio=false;
 var tenis_name="";
+var respuestas_array = new Array();
+var final_time = 0;
+var aciertos = 0;
 
 
 var maxTime = 99;
 var time = maxTime;
 var time_out=0;
+
 $('#dial').knob({
   readOnly : true,
   thickness : 0.2,
@@ -29,34 +33,30 @@ $('#dial').knob({
   
 });
 
-
 var intervalo;
 
 $("#indepth_contador_circle input").css("margin-top",0);
-
 
 $("#indepth_boton_empezar").on("click",function(){
 	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 	 $.getJSON( urlIndepth+"js/data.json", function( data ) {
 		 
-		 preguntas=data.preguntas;
+		 console.log(data);
 		 
-		 console.log(preguntas);
+		 preguntas=data.preguntas;
 		 
 		 $.each(preguntas, function( i, item ) {
 			 
-			var div=' <div class="indepth_pregunta_item" num="'+i+'"><div class="indepth_pregunta">'+(i+1)+'- '+item.pregunta+'</div><div class="indepth_pregunta_main"><div class="indepth_pregunta_img"><img src="'+urlIndepth+'images/preguntas/'+(i+1)+'.jpg" /></div><div class="indepth_respuestas_cont">';
+			var div=' <div class="indepth_pregunta_item"><div class="indepth_pregunta">'+(i+1)+'- '+item.pregunta+'</div><div class="indepth_pregunta_main"><div class="indepth_pregunta_img"><img src="'+urlIndepth+'images/preguntas/'+(i+1)+'.jpg" /></div><div class="indepth_respuestas_cont" num="'+i+'">';
 				
 			var div_items="";
-				$.each(item.respuestas, function( i, items ) {
-					div_items+='<div class="indepth_respuesta_item">'+items.respuesta+'</div>';
-				});						
+			$.each(item.respuestas, function( j, items ) {
+				div_items+='<div class="indepth_respuesta_item active" num="'+j+'">'+items.respuesta+'</div>';
+			});						
 										
 			var div_fin='</div></div></div>';
 			 
-			 $("#indepth_pregunta_cont").append(div+div_items+div_fin);
-			 
-			 
+			 $("#indepth_pregunta_cont").append(div+div_items+div_fin);			 
 		 });
 		 
 		 $("#indepth_page1").css({
@@ -74,8 +74,6 @@ $("#indepth_boton_empezar").on("click",function(){
 			  if(time<=0){
 			  	clearInterval(intervalo);
 			  	finish_test();
-			  	
-			  	
 			 }	
 			  time--;
 			  $('#dial')
@@ -83,11 +81,37 @@ $("#indepth_boton_empezar").on("click",function(){
 			        .trigger('change');
 			}, 1000);
 		})
+		
+		$(document).on("click",".indepth_respuesta_item",function(){
+				
+			var respuesta_cont = $(this).parent();
+			var pregunta_num = respuesta_cont.attr("num");
+			var respuesta_num = $(this).attr("num");
+			var pregunta_obj = preguntas[pregunta_num];
+			var respuesta_obj = pregunta_obj.respuestas[respuesta_num];
+			
+			tipo= (respuesta_obj.tipo === "true");
+			
+			if(tipo){
+				$(this).addClass("bien");
+				respuestas_array[pregunta_num]=true;
+			}else{
+				$(this).addClass("mal");
+				respuestas_array[pregunta_num]=false;
+			}
+			
+			respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
+			respuesta_cont.find('.indepth_respuesta_item').click(false);
+						
+			if(preguntas.length == respuestas_array.length){
+				final_time = time;
+				
+				clearInterval(intervalo);
+				window.setTimeout(finish_test, 700);
+			}
+			
+		});
 	 });
-	
-	
-	
-	
 });
 
 
@@ -112,8 +136,22 @@ function finish_test(){
   	
   	$("#indepth_resultados").animate({
 	  	"left": 0
-  	},500);
+  	},2000);
+
+  	$.each(respuestas_array, function( i, item ) {
+	  	if(item){
+		  	aciertos++;
+	  	}
+  	});
+  	
+  	$("#indepth_aciertos").html(aciertos);
+  	
+  	
+  	
 }
+
+
+
 
 $('.indepth_num').keydown(function(event) {
 	// Allow special chars + arrows 
@@ -128,7 +166,7 @@ $('.indepth_num').keydown(function(event) {
 
 });
 
-$('.idepth_marcador').keydown(function(event) {
+$('.idepth_marcador, .idepth_marcador2').keydown(function(event) {
 	// Allow special chars + arrows 
 	if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9  || event.keyCode == 27 || event.keyCode == 13 || (event.keyCode == 65 && event.ctrlKey === true)  || (event.keyCode >= 35 && event.keyCode <= 39)){
 	        return;
@@ -140,34 +178,6 @@ $('.idepth_marcador').keydown(function(event) {
 	}
 });
 
-$(document).on("click","#indepth_return",function(){
-	$(" input:radio").attr("checked", false);	
-	$("#indepth_resultados").removeClass();
-	tenis_data={"x":0,"ace":0};
-	jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
-	input_text=false;
-	input_goles=false;
-	input_radio=false;
-	
-	$('#indepth_container').fullpage({
-		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
-	    scrollOverflow: true,
-	    scrollbar: true,
-	    slideSelector: '.section',
-	    slidesNavigation: false,
-	    controlArrows: false,
-	    scrollingSpeed: 1000,
-	    afterLoad: function(anchorLink, index){
-            
-        }
-    });
-
-	$(this).hide();
-	$("input:text").val('');	
-	disable=true;
-	$(".indepth_boton").addClass("disable");
-	$("#indepth_resultados").css("position","initial");
-});
 
 $('.indepth_num').keyup(function(event) {
 	
@@ -180,16 +190,6 @@ $('.indepth_num').keyup(function(event) {
 
 });
 
-$(document).on("change","input:radio",function(){
-	$.fn.fullpage.moveSectionDown();
-	
-	if($(".indepth_tenis input[name=pregunta1]").is(":checked") && $(".indepth_tenis input[name=pregunta2]").is(":checked") && $(".indepth_tenis input[name=pregunta3]").is(":checked")  && $(" input[name=pregunta4]").is(":checked")  && $(" input[name=pregunta5]").is(":checked")  && $(" input[name=pregunta6]").is(":checked")){
-		input_radio=true;
-	}else{
-		input_radio=false;
-	}
-	indepth_comprobar();
-});
 
 $('.idepth_marcador').keyup(function(event) {
 	if($(this).val()!="" ){
@@ -213,67 +213,19 @@ $('.idepth_marcador2').keyup(function(event) {
 
 
 var indepth_comprobar = function(){
-
-	if(input_text && input_text2 && input_radio && input_goles){
+	console.log(input_text + " - " + input_text2 + " - " + input_goles);
+	
+	if(input_text && input_text2 && input_goles){
 		$(".indepth_boton").removeClass("disable");
 		disable=false;
 	}else{
 		$(".indepth_boton").addClass("disable");
 		disable=true;
 	}
+	
+	console.log(disable);
 }
 
-$(".indepth_tenis input[type=radio]").on("change",function(){
-	if($(".indepth_tenis input[name=pregunta1]").is(":checked") && $(".indepth_tenis input[name=pregunta2]").is(":checked") && $(".indepth_tenis input[name=pregunta3]").is(":checked")){
-		
-		tenis_data={"x":0,"ace":0};
-		
-		tenis_data[$("input[name=pregunta1]:checked").val()]=parseInt(tenis_data[$("input[name=pregunta1]:checked").val()])+1;
-		tenis_data[$("input[name=pregunta2]:checked").val()]=parseInt(tenis_data[$("input[name=pregunta2]:checked").val()])+1;
-		tenis_data[$("input[name=pregunta3]:checked").val()]=parseInt(tenis_data[$("input[name=pregunta3]:checked").val()])+1;		
-		
-		
-			if(tenis_data["ace"]>tenis_data["x"]){
-				if(!active_ace){
-					$(".indepth_jugadores input:radio").attr("checked", false);
-				}
-				tenis_name="ace";
-				$(".adidas_ace").css("display","block");
-					$(".adidas_x").css("display","none");
-					$("#indepth_resultados").addClass("m_ace");
-					$("#tenis_name").html("Ace");
-					active_ace=true;
-				
-					
-				
-			}else{
-				
-				if(active_ace){
-						$(".indepth_jugadores input:radio").attr("checked", false);		
-				}
-				$(".adidas_x").css("display","block");
-					$(".adidas_ace").css("display","none");
-					$("#indepth_resultados").addClass("m_x");
-					$("#tenis_name").html("X");
-					active_ace=false;
-					tenis_name="x";
-			}
-		
-		
-		
-		$(".indepth_aviso").hide();
-	}
-	
-	
-
-});
-
-
-
-$("input").on("change",function(){
-
-	
-});
 
 var indepth_sizeAdjust = function(firstTime){
 	$(".indepth_page").each(function(){
@@ -334,107 +286,31 @@ if (window.DISQUS) {
 $(document).ready(function(){
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
-	var ventana_alto = $(window).height();
-	var ventana_ancho = $(window).width();
+	ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
+	ventana_ancho = $(window).width();
 	
 	$("#indepth_cover").css({
 		"width": (ventana_ancho)+"px",
 		"height": (ventana_alto-100)+"px"	
 	})
 		
-	    $("#indepth_resultados").css({
-	"width":ventana_ancho+"px",
-	"height":ventana_alto+"px"
-});
+	$("#indepth_resultados").css({
+		"width":ventana_ancho+"px",
+		"height":ventana_alto+"px"
+	});
 
-$(".indepth_boton").click(function(){
+$("#indepth_twittear").click(function(){
 
 	if(!disable){
-		var fornm_t= $('form').serializeArray();
-		$.each(fornm_t, function(i,pregunta){
-			if(i>2 && i<6){
-				jugadores_num[pregunta["value"]]=parseInt(jugadores_num[pregunta["value"]])+1;
-			}
-		});
-		
-		var jugadore_rand=[]
-		jugador_m=false;
-		
-		var ord_jug=null;
-		
-		var listKeys = [];
-		for(x in jugadores_num) listKeys.push(x);		
-		for(i=0;i<listKeys.length;i++){
-			if(ord_jug==null){
-				ord_jug=listKeys[i];
-			}else{
-				if(jugadores_num[listKeys[i]]>jugadores_num[ord_jug]){
-					ord_jug=listKeys[i];
-				}
-			}
-			
-			if(jugadores_num[listKeys[i]]>1){
-				jugador_m=true;
-			}
-			
-			if(jugadores_num[listKeys[i]]>0){
-				jugadore_rand.push(listKeys[i]);
-			}
-			
-		}
-		
-		if(!jugador_m){
-			ord_jug=jugadore_rand[Math.floor(Math.random() * 2) + 0 ];
-		}
-		
-		
-		$("#linkAdidas").attr("href", url_adidas[tenis_name] );
-		
-		// Hashtag 1-AdidasAce 2-AdidasAce
-		var ht_tweet= hashtags[tenis_name];
-		
-		var tenis_a=((tenis_name=="ace")? "Ace" : "X")
-		
-		$("#tenis_name_a").html(tenis_a)	
-		
-		var text_tweet="Soy " + jugadores_twitter[ord_jug] + " y uso adidas " + tenis_a + ". Mi predicción es Goles: "+$("input[name=goles_anotados]").val()+", Marcador: "+$("input[name=goleador]").val()+"-"+$("input[name=goleador2]").val();
-		
-		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fjuanfutbol.com%2Findepth%2Forden-y-caos-en-la-cancha-quien-eres-tu%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
-		
-		$("#link_tweet").attr("href",tweet_url);
 
-		$("#indepth_resultados").addClass("j_"+ord_jug);
-		$("#jugador_name").html(jugadores_nombres[ord_jug]);
 		
-		$(".indepth_tenis_text").html(jugadores_descripcion[ord_jug]);
-		
-		$("#indepth_resultados").css("position","fixed");
-		$("#indepth_return").show();
-		
-		$.fn.fullpage.moveTo("cover");
-		$.fn.fullpage.destroy("all");
-		
-		$("body").css({
-			height:"100%",
-			overflow: "hidden"
-		});
-		
-		window.scrollto(0,1);
+		var text = encodeURIComponent("Mi predicción es Minuto del primer gol: "+$("input[name=goles_anotados]").val()+", Goles: "+$("input[name=goleador]").val()+"-"+$("input[name=goleador2]").val());
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/social-network-football-league");
+		window.open("https://twitter.com/share?text="+text+"&url="+url,"","width=500, height=300");
+
 	}else{
 		
-		var v={"pregunta1":false,"pregunta2":false,"pregunta3":false,"pregunta4":false,"pregunta5":false,"pregunta6":false};
-		$("input:radio").each(function(){
-			if($(this).is(":checked")){
-				v[$(this).attr("name")]=true;
-			}
-		});
 		
-		$.each(v, function(i,item){
-			if(!item){
-				$.fn.fullpage.moveTo(i);
-				return false;
-			}
-		});
 		
 	}
 	
@@ -447,13 +323,18 @@ $(".indepth_boton").click(function(){
 
 $(window).on("resize", function(){
 
-	var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
-	var ventana_ancho = $(window).width();
-	
-		 $("#indepth_resultados").css({
-		"width":ventana_ancho+"px",
-		"height":ventana_alto+"px"
-	});
+	ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
+	ventana_ancho = $(window).width();
+
+	$("#indepth_cover").css({
+		"width": (ventana_ancho)+"px",
+		"height": (ventana_alto-100)+"px"	
+	})
+		
+	    $("#indepth_resultados").css({
+	"width":ventana_ancho+"px",
+	"height":ventana_alto+"px"
+});
 });
 
 

@@ -59,14 +59,14 @@
 
 
 #logo_america{
-	width: 100%;
+	width: 90%;
 	height: auto;
 	max-width: 645px;
 	margin-bottom: 45px;
 }
 
 #logo99{
-	width: 100%;
+	width: 90%;
 	max-width: 600px;
 	margin-bottom: 40px;
 }
@@ -436,16 +436,22 @@
 	line-height: 50px;
 }
 
+.indepth_respuesta_item.active:hover{
+	background-color: rgba(23, 52, 100, 0.6);
+}
+
+.indepth_respuesta_item.disable{
+	opacity: .5;
+}
+
 .indepth_respuesta_item.bien{
 	background-image: url(../images/Bien.png);
+	opacity: 1;
 }
 
 .indepth_respuesta_item.mal{
 	background-image: url(../images/Mal.png);
-}
-
-.indepth_respuesta_item:hover{
-	background-color: rgba(23, 52, 100, 0.6);
+	opacity: 1;
 }
 
 .indepth_pregunta_img{
@@ -754,14 +760,6 @@
 	
 
 	
-	#indepth_cover .indepth_parallax_back{
-		background-image: url(../images/Portada/Portada_movil.jpg);
-		background-position: center center;
-	}
-	
-	#indepth_pageBillboard{
-		background-image: url(../images/Billboard/Billboard_movil.jpg);
-	}
 
 }
 
@@ -799,7 +797,58 @@
 
 }
 
-@media screen and (max-width: 414px) {
+
+	
+@media screen and (max-width: 360px) {
+.indepth_concurso_text{
+	font-size: 16px;
+}
+
+.indepth_tenis_title{
+	font-size: 22px;
+}
+
+.indepth_tenis_text{
+	margin-top: 5px;
+}
+
+.indepth_image_tenis {
+  width: 90%;
+  height: 100px;
+}
+	.indepth_pregunta{
+		font-size: 20px;
+	}
+
+}
+
+@media screen and (max-height: 750px) {
+	
+	#indepth_boton_empezar{
+		margin: 10px auto;
+	}
+	
+	#indepth_boton_empezar:hover{
+		color: #cbb400;
+		background: #fff;
+	}
+	
+	
+	#logo_america{
+		height: auto;
+		max-width: 550px;
+		margin-bottom: 25px;
+	}
+	
+	#logo99{
+		max-width: 500px;
+		margin-bottom: 20px;
+	}
+
+
+}
+
+@media screen and (max-width: 360px) {
 	#header{
 		display: none;
 	}
@@ -845,43 +894,22 @@
 	font-size: 22px;
 }
 
-	
+	#logo99{
+			max-width: 200px;
+			margin-bottom: 10px;
+		}
+		
+	#logo_america{
+		margin-bottom: 10px;
 	}
 	
-@media screen and (max-width: 360px) {
-.indepth_concurso_text{
-	font-size: 16px;
-}
-
-.indepth_tenis_title{
-	font-size: 22px;
-}
-
-.indepth_tenis_text{
-	margin-top: 5px;
-}
-
-.indepth_image_tenis {
-  width: 90%;
-  height: 100px;
-}
-	.indepth_pregunta{
-		font-size: 20px;
+	#indepth_portada_text{
+		font-size: 16px;
+		margin-bottom: 10px;
 	}
 
-}
-
-@media screen and (max-height: 414px) {
-	.indepth_image_tenis{
-		width: 200px;
-		height: 150px;
-	}
 	
-	.indepth_tenis_text{
-		width: 90%;
 	}
-
-}
 
 @media screen and (max-width: 736px) and (max-height: 414px){
 	#indepth_cover .indepth_parallax_back{
