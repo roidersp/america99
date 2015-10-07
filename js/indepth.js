@@ -39,7 +39,7 @@ $("#indepth_contador_circle input").css("margin-top",0);
 
 $("#indepth_boton_empezar").on("click",function(){
 	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
-	 $.getJSON( urlIndepth+"js/data.json", function( data ) {
+	 $.getJSON( urlIndepth+"js/data2.json", function( data ) {
 		 
 		 console.log(data);
 		 
@@ -125,7 +125,7 @@ function finish_test(){
 	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();;
 	var ventana_ancho = $(window).width();
 	
-	$("html, body, #indepth_page1").css("overfloww","auto")
+	
 	
 	$("#indepth_resultados").css({
 		"visibility": "visible",
@@ -136,7 +136,9 @@ function finish_test(){
   	
   	$("#indepth_resultados").animate({
 	  	"left": 0
-  	},2000);
+  	},2000, function(){
+	  	$("html, body, #indepth_page1").css("overflow","hidden");
+  	});
 
   	$.each(respuestas_array, function( i, item ) {
 	  	if(item){

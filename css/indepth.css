@@ -157,7 +157,6 @@
 
 .indepth_pages{
 	width: 100%;
-	min-width: 960px;
 	position: relative;
 	background-color: white;
 	font-family: 'Roboto';
@@ -167,7 +166,6 @@
 
 .indepth_page{
 	width: 100%;
-	min-width: 960px;
 	position: relative;
 	overflow: hidden;
 	background-color: white;
@@ -398,7 +396,8 @@
 	font-size: 18px;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
-	width: 700px;
+	max-width: 700px;
+	width: 90%;
 	margin: 40px auto;
 	
 }
@@ -408,7 +407,7 @@
 }
 
 .indepth_pregunta_item{
-	width: 100%;
+	width: 96%;
 	max-width: 800px;
 	margin: auto;
 	position: relative;
@@ -691,45 +690,40 @@
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 
 
-	.indepth_pages{
-		width: 100%;
-		max-width: 800px;	
-		min-width: 0px;
-	}
 
-	.indepth_page{
-		min-width: 0px;
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-	}
-	
 	.indepth_page_body{
-		width:95%;
 		margin: 0 auto;
 	}
 	
-	#indepth_cover .indepth_titlle_container {
-		width: 100%;
-	}
+	.indepth_pregunta_item{
+		max-width: 600px;
+	}	
 	
+	.indepth_respuestas_cont{
+		margin-left: 0px;
+		margin-top: 20px;
+		height: auto;
+	}
 
 	
 	.indepth_pregunta_cont{
 		width: 600px;
 	}
 	
+	.indepth_respuesta_item{
+		width: 305px;
+		height: 40px;
+		line-height: 40px;
+	}
+	
 	.indepth_boton{
 		float: none;
 	}
 	
-	.indepth_pregunta_t{
-		font-size: 26px;
-	}
-	
+
 	#indepth_page6 {
 	  background-position: 80% 50%;
 	}
@@ -745,20 +739,99 @@
 		
 }
 
-@media screen and (max-width: 768px) {
-	.indepth_radios{
-		margin-top: 20px;
-	}
-	.indepth_pregunta_cont {
-	  width: 90%;
-	  padding: 5%;
+@media screen and (max-width: 640px) {
+	
+	.indepth_result_cont{
+		width: 450px;
+		height: auto;
+		margin: auto;
+		background-image: url(../images/Logo_america.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 642px auto;
+		padding: 0 20px;
+		padding-top: 90px;
+		display: table;
+		
 	}
 	
-	.indepth_radios input[type="radio"] {
-	  margin-top: 15px;
+	.indepth_pronostico_cont{
+		width: 450px;
+		padding: 30px 20px;
 	}
+
+
 	
 
+}
+
+@media screen and (max-width: 550px) {
+	
+	.indepth_result_cont{
+		width: 360px;
+		height: auto;
+		margin: auto;
+		background-image: url(../images/Logo_america.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 642px auto;
+		padding: 0 10px;
+		padding-top: 90px;
+		display: table;
+		
+	}
+	
+	.indepth_pronostico_cont{
+		width: 360px;
+		padding: 20px 10px;
+	}
+
+
+	
+
+}
+
+@media screen and (max-width: 400px) {
+	
+	.indepth_result_cont{
+		width: 300px;
+		height: auto;
+		margin: auto;
+		background-image: url(../images/Logo_america.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 642px auto;
+		padding: 0 10px;
+		padding-top: 90px;
+		display: table;
+		
+	}
+	
+	.indepth_pronostico_cont{
+		width: 300px;
+		padding: 20px 10px;
+	}
+	
+	.indepth_result_title{
+		font-size: 18px;
+	}
+	
+	.indepth_result_text{
+		font-size: 16px;
+	}
+	
+	.indepth_pronostico_pregunta_text{
+		font-size: 16px;
+	}
+	
+	#indepth_resultados{
+		overflow: scroll;
+	}
+
+	.indepth_cuadro_text{
+		height: 25px;
+		line-height: 25px;
+	}
 	
 
 }
@@ -800,24 +873,41 @@
 
 	
 @media screen and (max-width: 360px) {
-.indepth_concurso_text{
-	font-size: 16px;
-}
-
-.indepth_tenis_title{
-	font-size: 22px;
-}
-
-.indepth_tenis_text{
-	margin-top: 5px;
-}
-
-.indepth_image_tenis {
-  width: 90%;
-  height: 100px;
-}
-	.indepth_pregunta{
-		font-size: 20px;
+	.indepth_pregunta_img{
+		width: 280px;
+		height: auto;
+		background: none;
+	}
+	
+	.indepth_pregunta_img img{
+		width: 100%;
+	}
+	
+	.indepth_respuesta_item{
+		width:  265px;
+	}
+	
+	.indepth_respuestas_cont{
+		width: auto;
+	}
+	
+	.indepth_pronostico_cont {
+	    width: 260px;
+	    padding: 10px 10px;
+	}
+	
+	.indepth_result_cont{
+		width: 280px;
+	}
+	
+	#indepth_resultados{
+		display: block;
+		
+	}
+	
+	.indepth_resultado_lo{
+		margin: 20px auto ; 
+		display: block;
 	}
 
 }

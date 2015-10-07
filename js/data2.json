@@ -1,0 +1,88 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "El gringo que más amábamos",
+      "respuestas": [
+        {
+          "respuesta": "Edgar Castillo",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "José Antonio Castro",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "José Torres",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Greg Garza",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Canterano que la rompió en 2013 y le valió para irse a Europa",
+      "respuestas": [
+        {
+          "respuesta": "Santiago Fernández",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Tony López",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Raúl Jiménez",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Francisco Torres",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Delantero africano que no es Jean Claude Pagal ni Kalusha Bwalya",
+      "respuestas": [
+        {
+          "respuesta": "Abdul Aberrazak",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Omam Biyik",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Alain Nkong",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "David Embe",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Manoseaba a sus compañeros durante los entrenamientos",
+      "respuestas": [
+        {
+          "respuesta": "Markus López",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Cuauhtémoc Blanco",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Germán Villa",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Ilie Dumitrescu",
+          "tipo": "false"
+        }
+      ]
+    }
+   ]
+  }
