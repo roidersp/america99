@@ -106,526 +106,585 @@
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "¿Quién es este rostro?",
       "respuestas": [
         {
-          "respuesta": "Markus",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Cuauhtémoc",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Germán",
+          "respuesta": "Roberto ‘Monito’ Rodriguez",
           "tipo": "true"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Fabián Peña ",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Lucas Castromán",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Enrique Vera ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "¿El cuarto de derecha a izquierda en la fila de abajo?",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Alfredo Tena",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Javier Aguirre",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Carlos Hermosillo ",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Héctor Miguel Zelada",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Chicharito aprendió de él",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Enrique Borja",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Matías Vuoso ",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Héctor Mihuel Zelada",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Carlos Reinoso",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Estuvo cerca de ganar la Champions, luego la rompió con nosotros",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Irenio Soares",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Claudio Piojo López",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Iván Zamorano",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Nelson Pipino Cuevas ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "La última leyenda ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Djalminha",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Luis Hernández",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
+          "respuesta": "Hugo Sánchez",
           "tipo": "false"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Cuauhtémoc Blanco",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Lo convertimos en estrella de TV Novelas",
+      "respuestas": [
+        {
+          "respuesta": "Pável Pardo",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Germán Villa",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Antonio de Nigris",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Luis García ",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Repatriamos al pentapichichi del Real Madrid ",
+      "respuestas": [
+        {
+          "respuesta": "Hugo Sánchez",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Luis García ",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Efraín Juárez",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Javier Chicharito Hernández ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Fue nuestro patrón antes que Azcárraga ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Jorge Vergara",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Mario Moreno Cantinflas",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Peña Nieto",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Michael Bauer ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Cristiano se inspiró en él ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Cuauhtémoc Blanco",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Salvador Cabañas ",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
+          "respuesta": "Valentino (kiko)",
+          "tipo": "true"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Marcelo Lipatín ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Ningún otro portero ha jugado en Europa",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Memo Ochoa",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Armando Navarrete",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Alberto Becerra",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Les dimos al último jugador que le dio un título a Cruz Azul ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Richard Núñez ",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Chaco Giménez ",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
+          "respuesta": "Carlos Hermosillo",
+          "tipo": "true"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Maza Rodríguez ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Es el mejor jugador chileno que ha llegado a México",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Carlos Reinoso",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Jean Beausejour",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Sebastián Saja",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Federico Higuaín",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Nosotros tuvimos el técnico que anhela el Tri ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Marcelo Bielsa",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "La Volpe",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "'Ruso' Brailovsky",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Sergio Bueno ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Lo nombraron el sucesor de Cuauhtémoc Blanco",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Reinaldo Navia",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Osvaldo Martínez ",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
+          "respuesta": "Rolfi Montenegro",
           "tipo": "false"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "More Mosqueda ",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Compartió cancha con Lio Messi en el Barcelona B ",
+      "respuestas": [
+        {
+          "respuesta": "Gio dos Santos",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Israel Martínez",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Santiago Fernández",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Ángel Reyna ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Puso fin a nuestra racha de 13 años sin ser campeones",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Kléber Boas",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Hugo Norberto Castillo",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Iván Zamorano",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Andrés Chitiva",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Dijo: \"Doy balones y me devuelven sandías\"",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Zague",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "José Dirceu Guimaraes",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Carlos Hermosillo",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Miguel Layún",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Fue campeón del Mundo y luego jugó con nosostros ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Cabinho",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Rosinei",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
+          "respuesta": "Enrique Esqueda",
           "tipo": "false"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Didí",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Llegó lesionado y se fue lesionado",
+      "respuestas": [
+        {
+          "respuesta": "Andrés Carignano",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Andrés 'Rifle' Andrade",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Alberto Becerra",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Thomas Vermaelen ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Nos defendió a nosotros... y también a las Chivas ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Marco Rossi ",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Antonio Mohamed",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
+          "respuesta": "Ramón Ramírez ",
+          "tipo": "true"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Raúl Salinas",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Le decían el \"cantante\"...",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Carlos Infante",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "José 'Gringo' Castro",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
+          "respuesta": "Christian Patiño",
           "tipo": "false"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Leonardo Fabio Moreno",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Nadie defendió nuestra playera más que él",
+      "respuestas": [
+        {
+          "respuesta": "Ramón Ramírez",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Cristobal Ortega",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Cuauhtémoc Blanco",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Duilio Davino ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "El mexicano más brasileño",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Zague",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Arlindo dos Santos",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Kléber",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Antonio Carlos Santos ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Repartió leña por todo el futbol mexicano ",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Isaac Terrazas",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Gerardo Torrado",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Diego Cervantes",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Moctezuma Serrato",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "No necesitas ver su cara para saber que fue el refuerzo más tronco de la historia",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Tony López",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Daniel Bilos ",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Nicolás Olivera",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Fernando Ortíz",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Se le recuerda por tener el peor look del América... y de la humanidad",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Marcelo Barticciotto",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Alvin Mendoza",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
+          "respuesta": "Jean-Claude Pagal",
+          "tipo": "true"
         },
         {
-          "respuesta": "Ilie",
+          "respuesta": "Matías Vuoso ",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "Fue votado el doceavo mejor futbolista del mundo... a pesar de fallar el gol más fácil de la historia ante Cruz Azul",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Kalusha",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Achille Emana",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Omam Biyik",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Narciso Mina",
           "tipo": "false"
         }
       ]
     },
     {
-      "pregunta": "Manoseaba",
+      "pregunta": "¿Habiendo clubes con más de cien años de historia, qué otro acumula más títulos en el futbol mexicano que el América?",
       "respuestas": [
         {
-          "respuesta": "Markus",
+          "respuesta": "Ninguno, somos únicos ",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Chivas",
           "tipo": "false"
         },
         {
-          "respuesta": "Cuauhtémoc",
+          "respuesta": "Cruz Azul",
           "tipo": "false"
         },
         {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
-          "tipo": "false"
-        }
-      ]
-    },
-    {
-      "pregunta": "Manoseaba",
-      "respuestas": [
-        {
-          "respuesta": "Markus",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Cuauhtémoc",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
-          "tipo": "false"
-        }
-      ]
-    },
-    {
-      "pregunta": "Manoseaba",
-      "respuestas": [
-        {
-          "respuesta": "Markus",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Cuauhtémoc",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Germán",
-          "tipo": "false"
-        },
-        {
-          "respuesta": "Ilie",
+          "respuesta": "Pumas",
           "tipo": "false"
         }
       ]

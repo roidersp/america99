@@ -38,12 +38,16 @@ var intervalo;
 $("#indepth_contador_circle input").css("margin-top",0);
 
 $("#indepth_boton_empezar").on("click",function(){
+	$("#indepth_boton_empezar").click(false);
 	 ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
-	 $.getJSON( urlIndepth+"js/data2.json", function( data ) {
+	 $.getJSON( urlIndepth+"js/data.json", function( data ) {
+		 
 		 
 		 console.log(data);
 		 
 		 preguntas=data.preguntas;
+		 
+		 $("#indepth_pregunta_cont").html("");
 		 
 		 $.each(preguntas, function( i, item ) {
 			 
@@ -146,12 +150,28 @@ function finish_test(){
 	  	}
   	});
   	
+  	aficionado="";
+  	msg="";
+  	
+  	if(aciertos<=10){
+	  	aficionado="Villamelón";
+	  	msg="Tus amigos influyeron en la elección de tus colores. Confundes a Carlos Infante con Pedro Infante, aunque el segundo sí brilló... en el cine. Crees que cada anotación vale seis puntos, más uno extra si lo anotas con la cabeza. Miguel Herrera estaría desilusionado de tu desempeño, pero no importa, los buenos gustos son bienvenidos.";
+  	}
+  	
+  	if(aciertos>10 && 20 >= aciertos){
+	  	aficionado="Cumplidor";
+	  	msg="Los colores llegaron a ti por influencia de tu padre, hermano o amigo. Nunca fuiste un clavado, te gustaba vivir el presente.  Gritaste con locura el gol del Misionero y fuiste un mar de lágrimas cuando el León arruinó el Bicampeonato. Lo sentimental es lo tuyo. Visto de otra forma, eres el Layún del conocimiento americanista.";
+  	}
+  	
+  	if(aciertos>20 ){
+	  	aficionado="Crack azulcrema";
+	  	msg="Naciste para ser grande. Eres el jugador número 12 que vive, llora, ríe y disfruta con el equipo. Tu fidelidad nunca está puesta en duda, incluso en el FIFA eliges al América por encima del Barcelona y Real Madrid. Aún sigues discutiendo con tus amigos si Narciso Mina debio ser titular frente al León";
+  	}
+  	
   	$("#indepth_aciertos").html(aciertos);
-  	
-  	
+  	$("#tipo_aficionado").html( aficionado )
   	
 }
-
 
 
 
