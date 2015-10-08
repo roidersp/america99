@@ -559,11 +559,6 @@
 	display: table;
 }
 
-#top-bar-wrapper{
-	z-index: 300;
-	display: none;
-}
-
 .indepth_result_container{
 	color: white;
 	display: table-cell;
