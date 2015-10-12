@@ -529,7 +529,7 @@
           "tipo": "false"
         },
         {
-          "respuesta": "José 'Gringo' Castro",
+          "respuesta": "José Antonio Castro",
           "tipo": "false"
         },
         {
@@ -550,7 +550,7 @@
           "tipo": "false"
         },
         {
-          "respuesta": "Cristobal Ortega",
+          "respuesta": "Cristóbal Ortega",
           "tipo": "true"
         },
         {
@@ -664,6 +664,174 @@
         },
         {
           "respuesta": "Narciso Mina",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Atajó un penal a Chivas en la final de Copa de 1954",
+      "respuestas": [
+        {
+          "respuesta": "Germán Núñez Cortina",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Octavio Vial",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Eduardo González Palmer",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Ernesto Sota",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": " Martinoli le tiraba por tener ascendencia europea",
+      "respuestas": [
+        {
+          "respuesta": "Maurizio Gaudino",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Lampros Kontogiannis",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Marco Rossi",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Frankie Oviedo",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A quién pertenece esta mata inconfundible?",
+      "respuestas": [
+        {
+          "respuesta": "Fabián Estay",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Iván Zamorano",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Frankie Oviedo",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Luis Hernández ",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Lo único que recordamos de aquel brasileño es su apodo ",
+      "respuestas": [
+        {
+          "respuesta": "Daniel Brailovsky",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Javier Fragoso",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Osvaldo Castro ",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Márcio Delvi da Costa",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién es este bigotón?",
+      "respuestas": [
+        {
+          "respuesta": "Gustavo Echaniz",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Carlos Infante",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Ricardo La Volpe",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Pedro Pineda ",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "El mejor amigo de este crack",
+      "respuestas": [
+        {
+          "respuesta": "Oswaldo Sánchez",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "David Faitelson",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Jared Borgetti",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Braulio Luna ",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "Delantero uruguayo que tampoco fue campeón con Cruz Azul",
+      "respuestas": [
+        {
+          "respuesta": " Sebastián Abreu ",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Federico Insúa",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Egidio Arévalo",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Marcelo Lipatín",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "Nos dejó con 10 hombres en la final de la Copa Sudamericana 2007",
+      "respuestas": [
+        {
+          "respuesta": "Lucas Castromán",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Germán Villa",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Mario Pérez",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Jesús Mendoza",
           "tipo": "false"
         }
       ]

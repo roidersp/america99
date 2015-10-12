@@ -546,7 +546,7 @@
 }
 
 #indepth_resultados{
-	z-index: 200;
+	z-index: 2000;
 	top:0;
 	background-image: url("../images/Portada.jpg");
 	background-repeat: no-repeat;
@@ -574,7 +574,8 @@
 
 .indepth_result_text{
 	font-style: italic;
-	font-size: 20px;
+	font-size: 14px;
+	padding: 10px;
 }
 
 .indepth_pronostico_cont{
