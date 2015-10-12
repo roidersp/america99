@@ -66,6 +66,9 @@ $("#indepth_boton_empezar").on("click",function(){
 			"visibility":"visible",
 			"height": "auto"
 		});
+		
+		$("#nav-bar-stats,#top-bar-wrapper,#body-wrapper").hide();
+		
 		$("#indepth_page1").show();
 		
 		$("#indepth_page1").animate({
